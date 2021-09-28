@@ -9,7 +9,7 @@ prompt("Adınızı Giriniz");
 //-- var
 // ? Ancak, modern JS var keyword'unun kullanımı azaldı.
 // ? Çünkü, var global değişken gibi düşünülebilir.
-// ? Günümüzde programcılar global değişken gerekmedikçe VAR tercih etMEMEKtedir.
+// ? Günümüzde programcılar global değişken gerekmedikçe VAR tercih etmemektedir.
 
 var isim = "Tahir";
 console.log(typeof isim);
@@ -19,28 +19,28 @@ console.log(typeof isim);
 // Const
 // TODO: const ve let Modern JS ile gelmiş yeni değişken tanımlama keyword'leridir.
 // ! CONST: Sadece başlangıçta değer atanabilir.
-// ! Sonradan değeri değiştirilemez (non-primitive'ler hariç).mümkünse const, yoksa let,
-// ! o da mümkün değilse var kullanılmalı. çünkü js de çok rahat değişiklik yapılıyor, var,
-// ! let sıkıntı çıkarabilir.
+// ! Sonradan değeri değiştirilemez (non-primitive'ler hariç).
+// ! Mümkünse const, yoksa let, o da mümkün değilse var kullanılmalı.
+// ! Çünkü js de çok rahat değişiklik yapılıyor, var, let sıkıntı çıkarabilir.
 
 const piSayisi = 3.14;
 // piSayisi = 3; // değiştirmeye kalkarsan itiraz eder...
 
-const isim1 = "Tahir"; // Const son değerdir değiştirilemez...
+const isim1 = "Tahir"; // Const son değerdir değiştirilemez...Final gibi...
 console.log(typeof isim1);
 
 // const number;
 // number=4; // ! 32 ve 33. satırlar hatalı yazıma girer...
 
 // Let
-// ? Eğerki değişkenimizin değerinin değişmesi gerekiyor ise const kullanamayız.
+// ? Eğer değişkenimizin değerinin değişmesi gerekiyor ise const kullanamayız.
 // ? Bunun yerine LET kullanabiliriz.
 // ! LET Block-scope bir değişkendir. VAR ise global-scope bir tanımlamadır.
 // * Block-scope: Sadece tanımlı olduğu alanda geçerlidir.
 
 let fiyat;
 fiyat = 10;
-console.log(typeof fiyat); //
+console.log(typeof fiyat); // number
 fiyat = "Basri";
 console.log("Fiyat"); // Fiyat
 
@@ -50,6 +50,7 @@ let name1 = "Alaattin";
 let name2 = "Faruk";
 let name3 = `Oğuzhan`;
 console.log(name3); // Oğuzhan
+console.log(name2); // Faruk
 
 // Aritmetik Operatörler
 
@@ -65,7 +66,7 @@ console.log(ad + " " + soyad); // Can Canan
 
 const s1 = 7;
 const s2 = "7";
-console.log(s1 + s2); // 77
+console.log(s1 + s2); // 77 --> Concat yaptı...
 
 console.log("Benim adım" + " " + ad + " " + "Benim yaşım" + " " + s1); // Benim adım Can Benim yaşım 7
 // Alternatif kolay yazdırma şekli... Template literal deniyor...
