@@ -1,62 +1,74 @@
-//bilgisayar 1-20 arasında bir sayı tut
+// TODO **********************************************************************************************
+//! Bilgisayar 1-20 arasında bir sayı tut
 
 let rastgeleSayi = Math.floor(Math.random() * 20 + 1);
 let puanPc = 10;
 let rekorPc = 0;
 
-// Her kontrol et butonuna tıklandığında çalıştırdım
+// TODO **********************************************************************************************
+
+//! Her kontrol et butonuna tıklandığında çalıştırdım
 document.querySelector(".kontrol").onclick = function () {
-  //tahminim doğruysa
+  //Tahminim doğruysa
   const tahmin = document.querySelector(".tahmin").value;
-  //! bir açılış
+  // 1 Açılış
   if (tahmin == rastgeleSayi) {
     document.querySelector("body").style.backgroundColor = "green";
     document.querySelector(".question").textContent = rastgeleSayi;
     document.querySelector(".mesaj").textContent = "🎉Tebrikler Bildiniz";
 
-    // Rekoru güncelle
-    //!bir nested
+    //! Rekoru güncelle
+    //?  1 Nested Açılış
     if (puanPc > rekorPc) {
       rekorPc = puanPc;
       document.querySelector(".rekor-skor").textContent = puanPc;
-    } //! bir nested kapanıs
-  } //! bir kapanıs
-  //tahmin yanlış ise
-  //! iki başlangıç
+    } //? 1 Nested kapanıs
+  } // 1 Kapanış
+  // Tahmin yanlış ise ;
+  //? iki başlangıç
   else {
-    //! 2 nested başlangıç
+    //? 2 Nested Açılış
     if (puanPc > 1) {
       puanPc--;
       let mesaj = document.querySelector(".mesaj");
+      // Ternary
       tahmin < rastgeleSayi
-        ? (mesaj.textContent = "Arttır 🆙")
+        ? (mesaj.textContent = "Arttır ⬆️")
         : (mesaj.textContent = "Azalt ⬇️");
       document.querySelector(".skor").textContent = puanPc;
     } else {
-      document.querySelector(".mesaj").textContent = "Oyunu kaybettiniz 😔";
+      document.querySelector(".mesaj").textContent = "Oyunu kaybettiniz 😢";
       document.querySelector(".skor").textContent = 0;
       document.querySelector("body").style.backgroundColor = "red";
-    } //! 2 nested bitis
-  } //! iki bitis
+    } //? 2 Nested Kapanış
+  } //? iki bitis
 };
 
-//tekrar butonuna basıldığında baslangıc degerleri yüklensin
+// TODO **********************************************************************************************
+
+//! Tekrar butonuna basıldığında baslangıç değerleri yüklensin...
+
 document.querySelector(".tekrar").onclick = () => {
   rastgeleSayi = Math.floor(Math.random() * 20 + 1);
   document.querySelector("body").style.backgroundColor = "#2d3436";
   document.querySelector(".question").textContent = "?";
-  document.querySelector(".mesaj").textContent = "Tahmine Baslanıyor!!";
+  document.querySelector(".mesaj").textContent = "Tahmine Baslanıyor!!!";
   puanPc = 10;
   document.querySelector(".skor").textContent = puanPc;
   document.querySelector(".tahmin").value = " ";
 };
-// Klavyeden bir tusa basıldığında çalış
 
-document.querySelector(".tahmin").onkeydown = function (olay) {
-  if (olay.keyCode == 13) {
+// TODO **********************************************************************************************
+
+//! Klavyeden bir tusa basıldığında çalış
+
+document.querySelector(".tahmin").onkeydown = function (klavye) {
+  if (klavye.keyCode == 13) {
+    // enter
     document.querySelector(".kontrol").onclick();
   }
-  if (olay.keyCode == 82) {
+  if (klavye.keyCode == 82) {
+    // r harfi
     document.querySelector(".tekrar").onclick();
   }
 };

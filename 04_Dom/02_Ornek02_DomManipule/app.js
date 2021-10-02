@@ -71,6 +71,7 @@ parag.innerHTML = `<h1>${"Programlama Dilleri"}</h1>`;
 
 //TODO ************************************************************************************************
 
+//? Hatırlatma !!! setAttribute Methodu
 // document.querySelector(".checkbox").setAttribute("type", "checkbox");
 
 //? Klavyeden bir tuşa basıldığında büyüsün küçülsün
