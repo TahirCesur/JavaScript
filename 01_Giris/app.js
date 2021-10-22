@@ -1,10 +1,53 @@
-//! Konsol
+//! Js yi Etkinleştirme Modu
+
+/*
+<noscript>
+Js devre dışı.. Etkinleştirmek için browserdaki ayarlar bölümünden düzeltme yapabilrsiniz...
+</noscript>
+*/
+
+//! Js yi Html de Tanımlama
+
+/*
+body tag ının en alt kısmına tanımlanabilir.. Aşağıdaki gibi...
+
+<body>
+    <h1>Javascript Dersine Hoşgeldiniz...</h1>
+
+
+
+
+    <script src="app.js"></script>
+</body>
+*/
+
+//! Js Yazdırma Şekilleri...
+
+//? console.log --> Tarayıcı konsoluna yazdırma
+//? alert() (window.alert) --> Uyarı pencersine yazdırma
+// alert bize tek seçenek sunar "Tamam" butonuyla...
+alert("Dikkat");
+//? document.write() --> HTML sayfasına yazdırma
+document.write("<br/>" + "Merhaba");
+//? innerHTML --> HTML nesnelerine yazdırma
+//? pronmpt() "Tamam" ve "İptal" seçeneği sunar... 2 Türlü yazımı vardır..
+prompt("Adınızı Giriniz");
+prompt("Youtube Kanal Adı Giriniz", "Youtube Kanalı");
+var kanal_ismi;
+kanal_ismi = prompt("Youtube Kanal Adı Giriniz", "Youtube Kanalı");
+document.write(
+  "<br/>" + kanal_ismi,
+  "Youtube Kanalına üye olmayı unutmayınız!"
+);
+
+//? confirm() "Tamam" ve "İptal" seçeneği sunar... Onay için kullanılır...
+confirm("Onay verdiğinize emin misiniz");
+
+//! Console Yazdırma Şekilleri...
 
 console.log("Hello Javascript");
-alert("Dikkat");
 console.warn("Bu bir uyarıdır");
 console.error("Bu bir hatadır bilerek yazdım...");
-prompt("Adınızı Giriniz");
 
 // Değişken Tanımlama Türleri --> (Var-Const-Let)
 
@@ -12,9 +55,15 @@ prompt("Adınızı Giriniz");
 
 //! var
 
-// ? Ancak, modern JS var keyword'unun kullanımı azaldı.
+// ? Modern JS "var" keyword'unun kullanımı azaldı.
 // ? Çünkü, var global değişken gibi düşünülebilir.
 // ? Günümüzde programcılar global değişken gerekmedikçe VAR tercih etmemektedir.
+// ? Keyword ler değişken ismi olarak kullanılmazlar.. if switch for var const vs gibi..
+// ? Sayılar eşittir ile tırnaksız tanımlanırken...
+// ? String yani metin ifadeleri de eşittir ile " " , ' ' ve ` ` şeklinde tanımlanmalıdır.
+// ? Değişken tanımlaması ; noktalı virgül ile tamamlanmalıdır...
+// ? Tanımlanmyan değişkenler undefined yani tanımsız olarak algılanır...
+// Örnek verecek olursak ; -- var sum; -- sum a bişey atanmamış.. Tanımsızdır...
 
 //! ÖNEMLİ: var deyimi ile aynı isimle tekrar değişken tanımlamak mümkündür.
 
@@ -31,7 +80,15 @@ console.log("FİYAT:" + fiyat); // FİYAT: ücretsiz yazdırır
 var isim = "Tahir";
 console.log(typeof isim); // string
 isim = 3.14;
-console.log(typeof isim); // number
+console.log(typeof isim); // number (type türünü yazdırır..)
+
+var t, j, m, sum;
+t = 7;
+j = 10;
+m = j - t;
+sum = t * j + m;
+console.log(m); // 3
+console.log(sum); // 73
 
 //! ********************************************************************************* */
 
@@ -300,7 +357,7 @@ console.log(s5 > "7"); // false (6>7 olduğundan false verir)
 
 // TODO *******************************************************************************/
 
-//! Mantıksal Operatörler
+//! Mantıksal Operatörler (Lagical Operators)
 
 // TODO --> && MANTIKSAL VE -->işlemi gerçekleştirir.
 // Kontrol ettiği değişkenlerin tamamı TRUE ise TRUE değer döndürür.
@@ -411,3 +468,13 @@ const boş = "",
 console.log(Boolean(sıfır), Boolean(nal)); // false false
 console.log(Boolean(tanımsız), Boolean(boş)); // false false
 console.log(Boolean(sayıDeğil)); // false
+
+//! Önemli Bir Not ;
+
+const h = 45e4; // bu şekilde bir yazım 45*10 üzeri 4 demektir.. 450000 sonucunu verir...
+document.write("<br/>" + h);
+console.log(h); // 450000
+
+const l = 45e-4; // bu şekilde bir yazım 45/10 üzeri -4 demektir.. 0.0045 sonucunu verir...
+document.write("<br/>" + l); // "<br/>" yazdırmada alt satıra geçirmek için kullanılabilir...
+console.log(l); // 0.0045
