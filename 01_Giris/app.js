@@ -29,6 +29,7 @@ body tag ının en alt kısmına tanımlanabilir.. Aşağıdaki gibi...
 alert("Dikkat");
 //? document.write() --> HTML sayfasına yazdırma
 document.write("<br/>" + "Merhaba");
+document.write("<br/>" + "Merhaba <font color='red'>Dünya</font> Hoşgeldiniz");
 //? innerHTML --> HTML nesnelerine yazdırma
 //? pronmpt() "Tamam" ve "İptal" seçeneği sunar... 2 Türlü yazımı vardır..
 prompt("Adınızı Giriniz");
@@ -126,10 +127,10 @@ console.log(typeof isim2); // number
 
 // const sayı = 5;
 // const sayı = 2;
-//? --> Not ; 70. satırda const a değer atadığımız için 71 tekrar atarsak hata alırız..
+//? --> Not ; 128. satırda consta değer atadığımız için 129 a tekrar atarsak hata alırız..
 
 // const number;
-// number=4; // ! 74 ve 75. satırlar hatalı yazıma girer...
+// number=4; // ! 132 ve 133. satırlar hatalı yazıma girer...
 
 //! ********************************************************************************* */
 
@@ -301,6 +302,16 @@ console.log(a); // 8
 const z = 3;
 // let k = z++; HATA: const değişkenin değeri arttırılamaz.
 
+// Örnek ;
+
+var o, p, j;
+o = 7;
+p = ++o;
+j = p--;
+
+document.write("<br>"); // alt satıra geçmeyi sağlıyor..
+document.write("o: ", o, " ", " p: ", p, "j= ", j); // o=8 p=7 j=8
+
 // TODO *******************************************************************************/
 
 //? ***********************************************************************************/
@@ -335,7 +346,7 @@ console.log(s3 === s4); // false (veri tipi number ve string olduğundan)
 
 const s5 = 6;
 console.log(s5 == 6); // true
-console.log(s5 == "6"); // true
+console.log(s5 == "6"); // true (Veri tipine bakmadığından)
 
 //! ÖNEMLİ: JS, operatörlere bakarak gerektiğinde string formatındaki sayıyı number
 //! formatına çevirerek işlemi gerçekleştiriyor...
