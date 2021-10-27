@@ -93,6 +93,26 @@ console.log(sum); // 73
 
 //! ********************************************************************************* */
 
+// Object veri türü
+
+var kisi = {
+  adi: "Tahir",
+  soyadi: "Selim",
+  yas: 33,
+};
+
+document.write(
+  "<br/>" +
+    "Adım " +
+    kisi.adi +
+    " Soyadım " +
+    kisi.soyadi +
+    " yaşım " +
+    kisi.yas
+); // Adım Tahir Soyadım Selim yaşım 33
+
+//! ********************************************************************************* */
+
 //! Const
 
 // TODO: const ve let Modern JS ile gelmiş yeni değişken tanımlama keyword'leridir.
@@ -482,10 +502,10 @@ console.log(Boolean(sayıDeğil)); // false
 
 //! Önemli Bir Not ;
 
-const h = 45e4; // bu şekilde bir yazım 45*10 üzeri 4 demektir.. 450000 sonucunu verir...
+const h = 45e4; // Bu şekilde bir yazım 45*10 üzeri 4 demektir.. 450000 sonucunu verir...
 document.write("<br/>" + h);
 console.log(h); // 450000
 
-const l = 45e-4; // bu şekilde bir yazım 45/10 üzeri -4 demektir.. 0.0045 sonucunu verir...
+const l = 45e-4; // Bu şekilde bir yazım 45/10 üzeri -4 demektir.. 0.0045 sonucunu verir...
 document.write("<br/>" + l); // "<br/>" yazdırmada alt satıra geçirmek için kullanılabilir...
 console.log(l); // 0.0045
