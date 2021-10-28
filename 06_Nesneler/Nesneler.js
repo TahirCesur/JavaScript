@@ -18,13 +18,14 @@ const insan = {
 
 console.log(insan);
 /* ad: "Kenan"
-diller: (4) ['Java', 'JS', 'SQL', 'HTML']
-dogumTarihi: 1991
-email: "insan@gmail.com"
-konum: "Türkiye"
-meslek: "developer"
 soyad: "Kul"
-yas: 30 */
+yas: 30 
+meslek: "developer"
+diller: (4) ['Java', 'JS', 'SQL', 'HTML']
+dogumTarihi: 1991 //! Bu bilgi aşağıdaki tanımlamalardan geldi...
+email: "insan@gmail.com" //! Bu bilgi aşağıdaki tanımlamalardan geldi...
+konum: "Türkiye" //! Bu bilgi aşağıdaki tanımlamalardan geldi...
+*/
 
 //? *************************************************************************************************
 // 1.yol ; .dot notasyonu ;

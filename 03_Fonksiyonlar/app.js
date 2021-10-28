@@ -12,7 +12,7 @@ function yazdirAd() {
 
 //? Fonksiyonun Çağırılması
 
-yazdirAd();
+yazdirAd(); // Bunu böyle çağırmazsak yazdıramayız...
 yazdirAd();
 // NOt ; Bu ifadeyi kaç defa yazarsak console da o kadar yazdırmış oluruz.... 2 kere Mehmet yazdıracak
 
@@ -22,6 +22,13 @@ function yazdirYas() {
   console.log(`Benim adım Mehmet ve Ben ${2021 - 1979} yaşındayım`);
 }
 yazdirYas(); // Benim adım Mehmet ve Ben 42 yaşındayım
+
+// Örnek ;
+
+function kisiBilgisi(name, surname, yasii) {
+  document.write("<br>" + name, surname, yasii);
+}
+kisiBilgisi("Ali ", "Candan ", 33); // Not; Boşluklara dikkat edilmeli.. (Ali Candan 33)
 
 // Örnek ; Farklı isimleri ve farklı yaşları yazdıracak şekilde daha modüler hale getiriniz...
 // Fonksiyonda hesapladığımız yaş bilgisini ana programda kullanmak istersek ne yapmalıyız ?
@@ -95,7 +102,6 @@ function tekCift(sayiniz) {
 const tekcift1 = function (sayi1) {
   return sayi1 % 2 == 0 ? "Çift" : "Tek";
 };
-
 console.log(tekcift1(15)); // Tek
 
 //? Örnek ;
@@ -143,7 +149,7 @@ alert(toplam(3, 2)); // 5 // !(Cevap console da değil alert kısmında yazmış
 //! Fonksiyon satır sayısı birden fazla ise süslü parantez kullanmalıyız.
 //! Eğer süslü parantez kullanıldı ise return de kullanmalıyız.
 
-// Örnek ; SORU: Bir dairenin alanını hesaplayan fonksiyonu arrow fonksiyon olarak yazınız.
+// Örnek ; Bir dairenin alanını hesaplayan fonksiyonu arrow fonksiyon olarak yazınız.
 // Yarıçap prompt ile girilmeli ve sonuç ana programda yazdırılmalıdır.
 
 const r = +prompt("Yarıçapı Giriniz");
@@ -234,7 +240,7 @@ console.log(`Fonk. Dışı: ${++sayı3}`); // Fonk. Dışı: 11 (10+1=11)
 /*
 3. Block-Scope ; Sadece tanımlandığı alt alanda (blokta) geçerli olan değişkenlere
  block-scope değişkenler denilir.
-• ES6 ile gelen bir özelliktir.
+ ES6 ile gelen bir özelliktir.
 */
 
 // Örnek ; Global ve function scope değişkenler aynı anda kullanılır ise:
