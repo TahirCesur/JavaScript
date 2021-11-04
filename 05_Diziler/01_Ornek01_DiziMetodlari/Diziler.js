@@ -42,7 +42,7 @@ console.log(isimler[8][0]); // undefined (tanımsızdır)
 
 //? Diziyi Değiştiren Methodlar
 
-/* Method anımları...
+/* Method Tanımları...
 
 ?.pop() ; Dizinin son elemanını diziden siler ve bu elemanı döndürür
 !.push() ; Dizinin sonuna bir veya daha fazla eleman ekler ve dizinin yeni eleman sayını döndürür.
