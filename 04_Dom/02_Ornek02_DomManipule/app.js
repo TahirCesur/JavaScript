@@ -1,6 +1,6 @@
 //TODO ************************************************************************************************
 
-//? Ara butonuna tıklandığında çalan telefon çıksın,zil çalsın
+//? Ara butonuna tıklandığında çalan telefon çıksın, zil çalsın
 
 let resim = document.querySelector(".resim"); // resim e ulaştım
 let zil = document.querySelector(".ses"); // audio ya ulaştım

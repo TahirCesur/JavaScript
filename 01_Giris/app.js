@@ -486,7 +486,7 @@ console.log(String(sayi6), sayi6); // 54 54
 const k1 = 5;
 const k2 = -7;
 const ismim = "John";
-console.log(Boolean(isim)); // true
+console.log(Boolean(ismim)); // true
 console.log(Boolean(k1)); // true
 console.log(Boolean(k2)); // true
 
