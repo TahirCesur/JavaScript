@@ -232,6 +232,7 @@ const rakamlar1 = [3, 5, 3, 2, 6, 7, 9];
 
 console.log(rakamlar1.map((x) => x * 3)); // (7) [9, 15, 9, 6, 18, 21, 27]
 
+// 2. yol
 console.log(
   rakamlar1.map((x, index) => `${index + 1}. elemanın 3 katı ${x * 3}`)
 );
@@ -258,7 +259,7 @@ const buyuk = isimler.map((isim) => isim.toUpperCase());
 console.log(buyuk);
 // (7) ['AHMET', 'MEHMET', 'ISMET', 'SAFFET', 'CAN', 'CANAN', 'CAVIDAN']
 
-document.querySelector(".baslık").textContent = buyuk.join(" -> ");
+document.querySelector(".baslık").textContent = buyuk.join(" -> "); // Açılış sayfasında yazdırıldı
 
 //!------------------------------------------------------------------------------------------------
 
@@ -270,6 +271,7 @@ const dolar = 8.1;
 const tlFiyatlar = [100, 150, 100, 50, 80];
 
 const dolarFiyatlar = tlFiyatlar.map((x) => (x / dolar).toFixed(2));
+// Not ; toFixed(2) küsürattan sonra kaç hane yazılsın istiyorsak bu methodu kullanıyoruz.
 const euroFiyatlar = tlFiyatlar.map((x) => (x / euro).toFixed(2));
 
 console.log(dolarFiyatlar); // (5) ['12.35', '18.52', '12.35', '6.17', '9.88']
@@ -311,6 +313,9 @@ const koordinatlar4 = [-100, 150, -32, 43, -20];
 negatifKoordinatlar4 = koordinatlar4.filter((x) => x < 0);
 console.log(negatifKoordinatlar4); // (3)[-100, -32, -20]
 
+// 2. Yol Daha kısa ve kolay
+console.log(koordinatlar4.filter((x) => x < 0)); // (3)[-100, -32, -20]
+
 //!------------------------------------------------------------------------------------------------
 
 //? Örnek ; Fiyatlar dizisindeki 250 den büyük fiyatları yazdır...
@@ -328,6 +333,7 @@ const maaslar = [3000, 5000, 4000, 6000, 6500];
 const yeni = maaslar.filter((a) => a <= 4000).map((a) => a * 1.5);
 console.log(yeni); // (2) [4500, 6000]
 
+// 2. Yol Daha kısa ve kolay
 console.log(maaslar.filter((a) => a <= 4000).map((a) => a * 1.5)); // (2) [4500, 6000]
 
 //!------------------------------------------------------------------------------------------------

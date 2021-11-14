@@ -1,6 +1,8 @@
 // TODO *********************************************************************************************
 
 const yaslar = [5, 10, 28, 42];
+// Şu şekilde de yazabilirdik..
+// var yaslarSırasıyla = new Array(5, 10, 28, 42);
 
 const isimler = [
   "Hakan",
@@ -15,7 +17,7 @@ const isimler = [
   "Ayse",
 ];
 console.log(isimler);
-// Yazdırma sonucu aşağıdaki şekilde... Ama aşağıdaki işlemler değiştiriyor listeyi...
+// Yazdırma sonucu aşağıdaki şekilde... Ama diğer alttaki işlemler değiştiriyor listeyi...
 /* Array(10)
 0: "Hakan"
 1: "Alaaddin"
@@ -101,21 +103,27 @@ meyveler.splice(4, 1, "Üzüm"); // ["Armut", "Erik", "Ayva", "Çilek", "Üzüm"
 // TODO Destekleyici Bir Örnek
 
 const meyveler1 = ["Elma", "Armut", "Muz", "Kivi"];
-// Kivi silindi. ["Elma", "Armut", "Muz"]
-meyveler1.pop();
+
+console.log(meyveler1.pop());
+// Son elemanı siler...Kivi silindi. ["Elma", "Armut", "Muz"]
+
+console.log(meyveler1.push("Ananas"));
 // Sonuna Ananas Eklendi. ["Elma", "Armut", "Muz", "Ananas"]
-meyveler1.push("Ananas");
+
+console.log(meyveler1.shift());
 // İlk eleman silindi. ["Armut", "Muz", "Ananas"]
-meyveler1.shift();
+
+console.log(meyveler1.unshift("Çilek"));
 // İlk sıraya Çilek eklendi.["Çilek", "Armut", "Muz", "Ananas"]
-meyveler1.unshift("Çilek");
-// Dizi indis sıralaması terslendi. ["Ananas", "Muz", "Armut", "Çilek"]
-meyveler1.reverse();
+
+console.log(meyveler1.reverse());
+// Dizi index sıralaması terslendi. ["Ananas", "Muz", "Armut", "Çilek"]
+
+console.log(meyveler1.sort());
 // Harf sırasına göre sıralandı.["Ananas", "Armut", "Muz", "Çilek"]
-meyveler1.sort();
+
+console.log(meyveler1.splice(1, 0, "Kiraz"));
 // 1. indeksine Kiraz eklendi. ["Ananas", "Kiraz", "Armut", "Muz", "Çilek"]
-meyveler1.splice(1, 0, "Kiraz");
-// 3. indeksdeki Muz, Kayısı ile değiştirildi. ["Ananas","Kiraz","Armut","Kayısı"]
 
 // TODO *********************************************************************************************
 
@@ -146,7 +154,7 @@ console.log(sayılar.includes(5)); // true
 console.log(sayılar.indexOf(2)); // 3
 
 //! .lastIndexOf() Belirtilen elemanın dizide görüldüğü en son indeks numarasını döndürür.
-//!  Bulunmazsa – 1 döndürür.
+//!  Bulunmazsa  -1 döndürür.
 
 console.log(sayılar.lastIndexOf(5)); // 7
 
@@ -192,7 +200,7 @@ sayılar1.includes(3); // false
 sayılar1.includes("3"); // true
 
 const elementler = ["Ateş", "Hava", "Su"];
-console.log(elementler.join()); // Ateş,Hava,Su
+console.log(elementler.join(",")); // Ateş,Hava,Su
 console.log(elementler.join("")); // AteşHavaSu
 console.log(elementler.join("-")); // Ateş-Hava-Su
 
