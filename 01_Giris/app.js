@@ -279,6 +279,121 @@ console.log(`Benim adım ${adi} Benim yaşım ${s1}`); // Benim adım Can Benim 
 
 // TODO *******************************************************************************/
 
+//! NaN --> Not a Number (Bir sayı değildir)
+
+var num = 11;
+var num1 = "8";
+var kelimeler = "Yazılım";
+console.log(num * kelimeler); // NaN
+console.log(num * num1); // 88
+console.log(num1 * num); // 88
+console.log(num1 + kelimeler); // 8Yazılım
+console.log(kelimeler + num); // Yazılım11
+
+// Nan ın veri türü Number dır bunu umutmayalım...
+
+// TODO *******************************************************************************/
+
+//! Infinity (Sonsuzluk)
+
+// Bir üstteki verileri kullanmak istiyorum..
+
+var metin = " ";
+
+while (num != Infinity) {
+  num = num * num;
+  metin = metin + num + "<br>";
+}
+document.write("<br>" + metin);
+/* Cevabı -- Alt alta karelerini yazdırdı sonsuzluğa gelince döngüden çıktı....
+121
+14641
+214358881
+45949729863572160
+2.111377674535255e+33
+4.457915684525902e+66
+1.987301225034204e+133
+3.949366159022448e+266
+Infinity
+*/
+
+// TODO *******************************************************************************/
+
+//! Sayı Dönşümleri (16 lık 8 lik ve 2 lik sistemde yazdırma)
+
+// 10 luk sistemden 16 lık 6 lik ve 2 lik sisteme dönüştürme
+
+var num2 = 121;
+
+document.write(
+  "16 lık Sistem : " +
+    num2.toString(16) +
+    "<br>" +
+    "8 lik Sistem : " +
+    num2.toString(8) +
+    "<br>" +
+    "2 lik Sistem : " +
+    num2.toString(2) +
+    "<br>"
+);
+
+/* Cevabı
+16 lık Sistem : 79
+8 lik Sistem : 171
+2 lik Sistem : 1111001
+*/
+
+//!  Sayıyı Stringe Dönüştürme
+
+var num3 = 21;
+var num4;
+num4 = num3.toString();
+
+document.write(typeof num3, "<br>", typeof num4, "<br>"); // number // String
+
+//! Number Methodu
+
+document.write(
+  Number(true) +
+    "<br>" +
+    Number(false) +
+    "<br>" +
+    Number("10") +
+    "<br>" +
+    Number("    11") +
+    "<br>" +
+    Number("12    ") +
+    "<br>" +
+    Number("    13    ") +
+    "<br>" +
+    Number("10.33") +
+    "<br>" +
+    Number("10,33") +
+    "<br>" +
+    Number("10 33") +
+    "<br>" +
+    Number("Selam") +
+    "<br>"
+);
+/* Not : Number ile yazdırılan sayıların önlerinde arkalarında 
+         bırakılan boşlukların önemli olmadığını anlıyoruz...
+         Ama "10 33" gibi durumlar da bize NaN döndürür...
+
+ Sırasıyla Cevapları aşağıdadır..
+1
+0
+10
+11
+12
+13
+10.33
+NaN
+NaN
+NaN
+*/
+
+// TODO *******************************************************************************/
+
 //! Aritmetik Operatörler (-)
 
 const yil = 2021;
@@ -333,7 +448,7 @@ p = ++o;
 j = p--;
 
 document.write("<br>"); // alt satıra geçmeyi sağlıyor..
-document.write("o: ", o, " ", " p: ", p, "j= ", j); // o=8 p=7 j=8
+document.write("o: ", o, " ", " p: ", p, " j= ", j); // o=8 p=7 j=8
 
 // TODO *******************************************************************************/
 
