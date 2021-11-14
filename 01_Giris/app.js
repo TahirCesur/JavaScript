@@ -269,6 +269,9 @@ console.log(adi + " " + soyad); // Can Canan
 const s1 = 7;
 const s2 = "7";
 console.log(s1 + s2); // 77 --> Concat yaptı...
+console.log(s1 - s2); // 0 (işlem ne ise onu yaptı)
+console.log(s1 * s2); // 49 (işlem ne ise onu yaptı)
+console.log(s1 / s2); // 1 (işlem ne ise onu yaptı)
 
 console.log("Benim adım" + " " + adi + " " + "Benim yaşım" + " " + s1); // Benim adım Can Benim yaşım 7
 // Alternatif kolay yazdırma şekli... Template literal deniyor...
@@ -509,3 +512,14 @@ console.log(h); // 450000
 const l = 45e-4; // Bu şekilde bir yazım 45/10 üzeri -4 demektir.. 0.0045 sonucunu verir...
 document.write("<br/>" + l); // "<br/>" yazdırmada alt satıra geçirmek için kullanılabilir...
 console.log(l); // 0.0045
+
+//! Ondalıklı Sayı Toplamındaki İnce Nokta
+
+var rakam1 = 0.3;
+var rakam2 = 0.6;
+
+document.write("<br/>" + (rakam1 + rakam2));
+// 0.9 diye cevap geldi.. Her zaman bu şekilde net cevap alamayabiliyoruz..
+
+// Doğru sonucu bulmak istiyorsak şunu yapmalıyız..
+document.write("<br/>" + (rakam1 * 10 + rakam2 * 10) / 10); // 0.99
