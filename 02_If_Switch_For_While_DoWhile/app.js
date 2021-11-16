@@ -151,7 +151,7 @@ if (yas < 18) {
 
   // Örnek ; Girilen bir sayının onlar ve birler basamağındaki rakamlarını yazı ile yazdıran program:
 
-  var sayi = prompt("Nolur iki basamaklı bir sayı girin.");
+  var sayi = prompt("Nolur iki basamaklı bir sayı girin :)");
   var birler = sayi % 10;
 
   switch (birler) {
@@ -283,6 +283,14 @@ if (yas < 18) {
     toplam1 += t;
   }
   console.log(toplam1);
+
+  // Örnek ; Javascript yazısının fontunu her defasında 5 punto büyüterek 10 kere yazdırınız...
+
+  for (let i = 0; i <= 10; i++) {
+    document.write(
+      "<span style='font-size:" + i + 5 + "px;'> Javascript</span><br>"
+    );
+  }
 
   //TODO ************************************************************************************************
 
