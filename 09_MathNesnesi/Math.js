@@ -61,7 +61,7 @@ document.write(
 document.write("*******************" + "<br>");
 
 /*
-Cevapları sırasıla şu şekildedir..
+Cevapları sırasıyla şu şekildedir..
 2.718281828459045
 3.141592653589793
 1.4142135623730951

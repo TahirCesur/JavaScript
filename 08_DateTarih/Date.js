@@ -1,6 +1,6 @@
 // TODO *******************************************************************************/
 
-//! Tarihleri Yazdırma Methodları
+//! Tarihleri ve Saatleri Yazdırma Methodları
 
 var tarih = new Date();
 document.write(tarih + "<br>"); // Mon Nov 15 2021 12:52:42 GMT+0300 (GMT+03:00)
