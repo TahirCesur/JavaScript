@@ -137,13 +137,40 @@ if (yas < 18) {
 
   /* 
  MacOS işletim sisteminde Emoji ve Semboller penceresini açmak için; klavyeden 'control' , 
-'command' ve 'space' tuşlarına aynı anda basın. Ardından ilgili
+ 'command' ve 'space' tuşlarına aynı anda basın. Ardından ilgili
  metin içeriğinde ya da sohbet penceresinde emoji klavyesi karşınıza çıkacaktır.
  Metin girişi sırasında Windows logo(pencere) tuşu + . (nokta) yazın. 
  Emoji klavyesi görüntülenir.
  Fareyle bir emoji seçin veya kullanılabilir emojiler arasında istediğiniz emojiyi 
  aramak için yazmaya devam edin.
  */
+  //TODO ************************************************************************************************
+
+  //! Break ve Continue Komutları
+
+  // Break Komutu için Örnek : 1 den 10 kadar olan for yazın ve 4 te dongu kırılsın
+  var ji;
+
+  for (ji = 1; ji <= 10; ji++) {
+    if (ji == 4) {
+      break;
+    }
+    document.write(ji + "<br>");
+  }
+
+  document.write("***************" + "<br>");
+
+  // Continue Komutu için Örnek : 1 den 10 kadar olan for yazın ve 7yi görmezden gelip dongu devam etsin.
+  var ji;
+
+  for (ji = 1; ji <= 10; ji++) {
+    if (ji == 7) {
+      continue;
+    }
+    document.write(ji + "<br>");
+  }
+
+  document.write("***************" + "<br>");
 
   //TODO ************************************************************************************************
 
@@ -316,7 +343,7 @@ if (yas < 18) {
   }
   console.log("Girdiğiniz not 0-100 arasındadır");
 
-  // Örnek ; Klavyeden end kelimesi girilene kadar not girişi yapan bir programı döngü kullanarak yazınız.
+  // Örnek ; Klavyeden e kelimesi girilene kadar not girişi yapan bir programı döngü kullanarak yazınız.
 
   let adi = prompt("b yaz enter la");
   let t = 1;
@@ -332,10 +359,10 @@ if (yas < 18) {
   //! Do-While Döngüsü
 
   /* 
-Do-While döngüsü yapı olarak while döngüsüne çok benzer. 
-Tek farkı döngü koşulunun en sonda kontrol edilmesidir.
-Bu yüzden bir do-while döngüsü en az bir kere çalışır.
-*/
+  Do-While döngüsü yapı olarak while döngüsüne çok benzer. 
+  Tek farkı döngü koşulunun en sonda kontrol edilmesidir.
+  Bu yüzden bir do-while döngüsü en az bir kere çalışır.
+  */
 
   // Örnek ; Dışarıdan 0-100 (not) dışında bir değer girilmesini engelleyen kodu yazınız.
 
