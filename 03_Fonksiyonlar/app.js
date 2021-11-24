@@ -324,3 +324,46 @@ function ozet(cumle, maxKarakter) {
 }
 
 ozet(cumle, 20);
+
+//!
+
+var urunler = {
+  urunAdi: "Dell",
+  urunCinsi: "Laptop",
+  fiyat: 900,
+  tanitim:
+    "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  summary: function () {
+    var ozetliCumle = [];
+    var maxKarakter = 20;
+    var cumle = this.tanitim;
+
+    if (maxKarakter > cumle.length) {
+      this.shortDescription = cumle;
+    } else {
+      var kelimeler = cumle.split(" ");
+
+      var toplamKarakter = 0;
+
+      for (var i = 0; i < kelimeler.length; i++) {
+        ozetliCumle.unshift(kelimeler[i]);
+        toplamKarakter += kelimeler[i].length;
+
+        if (toplamKarakter > maxKarakter) {
+          break;
+        }
+      }
+    }
+    this.shortDescription = ozetliCumle.join(" ") + "...";
+  },
+};
+
+//urunler.summary();
+
+console.log(urunler);
+/*
+fiyat: 900
+tanitim: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+urunAdi: "Dell"
+urunCinsi: "Laptop"
+*/
