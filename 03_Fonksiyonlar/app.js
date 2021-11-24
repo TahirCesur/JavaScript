@@ -251,3 +251,76 @@ const fonk3 = function () {
 };
 fonk3();
 console.log(`Fonk. Dışı: ${++sayı4}`); // Fonk. Dışı: 4 (3+1=4)
+
+//TODO ************************************************************************************************
+
+//? Fonksiynlarla ilgili Bir Uygulama
+
+var now = 2021;
+
+function yasHesaplama(old) {
+  return now - old;
+}
+
+var basri = yasHesaplama(1980);
+var tahir = yasHesaplama(1984);
+var ahmet = yasHesaplama(1985);
+
+console.log("Basri " + basri + " yasindadir"); // Basri 41 yasindadir
+console.log("tahir " + tahir + " yasindadir"); // tahir 37 yasindadir
+console.log("ahmet " + ahmet + " yasindadir"); // ahmet 36 yasindadir
+
+// emekliliklerini yasHesaplama
+
+function emeklilik(isim, yas) {
+  var kullaniciYas = yasHesaplama(yas);
+  var kacYasEmeklilik = 65 - kullaniciYas;
+
+  if (kacYasEmeklilik > 0) {
+    console.log(
+      isim + " adli sahis " + kacYasEmeklilik + " yil sonra emekli olacak"
+    ); // merve adli sahis 42 yil sonra emekli olacak
+  } else {
+    console.log(
+      isim + " adli sahis " + -kacYasEmeklilik + " yil önce emekli olmustur."
+    ); // dede adli sahis 24 yil önce emekli olmustur.
+  }
+}
+
+emeklilik("merve", 1998);
+emeklilik("dede", 1932);
+
+//TODO ************************************************************************************************
+
+//! Fonksiyonlarla Özetleme Uygulaması
+
+/*Cümle özetleme uygulamasi: istedigimiz karekter sayisindan itibaren bölsün. Kelime ortasina denk gelmesin*/
+
+var cumle =
+  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi numquam vero, pariatur tempore quia asperiores delectus itaque, facere vel cumque?";
+
+function ozet(cumle, maxKarakter) {
+  var ozetCumle = [];
+
+  if (maxKarakter > cumle.length) {
+    console.log("yazdiginiz cümle ozetlenecek kadar uzun degil");
+  } else {
+    var kelimeler = cumle.split(" ");
+    //document.writeln(kelimeler)
+
+    var toplamKarakter = 0;
+
+    for (var i = 0; i < kelimeler.length; i++) {
+      ozetCumle.unshift(kelimeler[i]);
+      toplamKarakter += kelimeler[i].length;
+      if (toplamKarakter > maxKarakter) {
+        break;
+      }
+    }
+  }
+
+  console.log(ozetCumle.join(" ") + "...");
+  // amet, sit dolor ipsum Lorem...
+}
+
+ozet(cumle, 20);

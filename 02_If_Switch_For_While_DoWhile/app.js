@@ -305,7 +305,7 @@ if (yas < 18) {
 
   //! Döngüler
 
-      /*  
+  /*  
   Programlarda tekrarlanan işlemleri nasıl yapabiliriz.
  • Örneğin Ekrana adımızı 100 kere adımızı yazdırmak istiyoruz.
  • Girilen 1000 adet sayıyı toplamak istiyoruz.
@@ -322,109 +322,137 @@ if (yas < 18) {
 
   //! For Döngüsü
 
-      // Örnek ; Konsola 10 kere bir ifade yazdıran program yazınız...
+  // Örnek ; Konsola 10 kere bir ifade yazdıran program yazınız...
 
-      // 1. yol
-      for (let i = 1; i <= 10; i++) {
-        console.log("Merhaba");
-      }
-      // 2. yol
-      for (let i = 1; i <= 10; i++) {
-        console.log(`${i}-Merhaba`);
-      }
+  // 1. yol
+  for (let i = 1; i <= 10; i++) {
+    console.log("Merhaba");
+  }
+  // 2. yol
+  for (let i = 1; i <= 10; i++) {
+    console.log(`${i}-Merhaba`);
+  }
 
-      // Örnek ; Asal sayı tespiti yapan program yazınız...
+  // Örnek ; Asal sayı tespiti yapan program yazınız...
 
-      const number = 10;
-      let asal = true;
+  const number = 10;
+  let asal = true;
 
-      for (let i = 2; i < number; i++) {
-        if (number % i == 0) {
-          asal = false;
-          break;
-        }
-      }
+  for (let i = 2; i < number; i++) {
+    if (number % i == 0) {
+      asal = false;
+      break;
+    }
+  }
 
-      const asalMi = asal ? "Asal" : "Asal degil";
-      console.log(asal ? "Asal" : "Asal degil"); // Asal degil
+  const asalMi = asal ? "Asal" : "Asal degil";
+  console.log(asal ? "Asal" : "Asal degil"); // Asal degil
 
-      // Örnek ; 1 den 10 kadar olan sayıların toplamını yazdıran program yazınız...
+  // Örnek ; 1 den 10 kadar olan sayıların toplamını yazdıran program yazınız...
 
-      let toplam = 0;
-      for (let t = 1; t <= 10; t++) {
-        toplam += t;
-      }
-      console.log(toplam);
+  let toplam = 0;
+  for (let t = 1; t <= 10; t++) {
+    toplam += t;
+  }
+  console.log(toplam);
 
-      // Örnek ;  1 den n kadar olan sayıların toplamını yazdıran program.
-      //? NOT: n prompt ile dışarıdan girilebilir.
+  // Örnek ;  1 den n kadar olan sayıların toplamını yazdıran program.
+  //? NOT: n prompt ile dışarıdan girilebilir.
 
-      const n = prompt("Hangi Sayıya kadar toplamak istiyorsunuz:");
-      let toplam1 = 0;
-      for (let t = 1; t <= n; t++) {
-        toplam1 += t;
-      }
-      console.log(toplam1);
+  const n = prompt("Hangi Sayıya kadar toplamak istiyorsunuz:");
+  let toplam1 = 0;
+  for (let t = 1; t <= n; t++) {
+    toplam1 += t;
+  }
+  console.log(toplam1);
 
-      // Örnek ; Javascript yazısının fontunu her defasında 5 punto büyüterek 10 kere yazdırınız...
+  // Örnek ; Javascript yazısının fontunu her defasında 5 punto büyüterek 10 kere yazdırınız...
 
-      for (let i = 0; i <= 10; i++) {
-        document.write(
-          "<span style='font-size:" + i + 5 + "px;'> Javascript</span><br>"
-        );
-      }
+  for (let i = 0; i <= 10; i++) {
+    document.write(
+      "<span style='font-size:" + i + 5 + "px;'> Javascript</span><br>"
+    );
+  }
 
-      //TODO ************************************************************************************************
+  // Örnek ;
 
-      //! While Döngüsü
+  var sehirler = ["Adana", "Bursa", "Malatya", "Izmir", "Ankara", "Istanbul"];
+  console.log(sehirler);
 
-      // While döngüsü yapı olarak for döngüsünden farklı olsa da benzer işleri yapmak içindir.
-      // Döngü koşulu doğru olduğu müddetçe döngü tekrar ettirilir. Yanlış olur olmaz döngüden çıkılır.
+  for (var i = 0; i < sehirler.length; i++) {
+    if (i % 2 == 1) console.log(sehirler[i]);
+  }
 
-      // Örnek ; 10 kere konsola Merhaba yazdıran uygulamayı while döngüsü ile yazınız.
+  //TODO ************************************************************************************************
 
-      let i = 1;
-      while (i <= 10) {
-        console.log(i + " Merhaba");
-        i++;
-      }
+  //! While Döngüsü
 
-      // Örnek ;
+  // While döngüsü yapı olarak for döngüsünden farklı olsa da benzer işleri yapmak içindir.
+  // Döngü koşulu doğru olduğu müddetçe döngü tekrar ettirilir. Yanlış olur olmaz döngüden çıkılır.
 
-      let not2 = prompt("Lütfen while için 0-100 arasında bir not giriniz:");
-      while (not2 < 0 || not2 > 100) {
-        console.error("Girilen not 0-100 arasında olmalıdır.");
-        not2 = prompt("0-100 arasında bir not giriniz:");
-      }
-      console.log("Girdiğiniz not 0-100 arasındadır");
+  // Örnek ; 10 kere konsola Merhaba yazdıran uygulamayı while döngüsü ile yazınız.
 
-      // Örnek ; Klavyeden e kelimesi girilene kadar not girişi yapan bir programı döngü kullanarak yazınız.
+  let i = 1;
+  while (i <= 10) {
+    console.log(i + " Merhaba");
+    i++;
+  }
 
-      let adi = prompt("b yaz enter la");
-      let t = 1;
-      while (adi != "e") {
-        //true yerine 1 de yazılabilir, bunlar hep true demek.0=false olur
-        adi = prompt(t + ".kisinin adını giriniz:");
-        t++;
-        console.log(adi);
-      }
+  // Örnek ;
 
-      //TODO ************************************************************************************************
+  let not2 = prompt("Lütfen while için 0-100 arasında bir not giriniz:");
+  while (not2 < 0 || not2 > 100) {
+    console.error("Girilen not 0-100 arasında olmalıdır.");
+    not2 = prompt("0-100 arasında bir not giriniz:");
+  }
+  console.log("Girdiğiniz not 0-100 arasındadır");
 
-      //! Do-While Döngüsü
+  // Örnek ; Klavyeden e kelimesi girilene kadar not girişi yapan bir programı döngü kullanarak yazınız.
 
-      /* 
+  let adi = prompt("b yaz enter la");
+  let t = 1;
+  while (adi != "e") {
+    //true yerine 1 de yazılabilir, bunlar hep true demek.0=false olur
+    adi = prompt(t + ".kisinin adını giriniz:");
+    t++;
+    console.log(adi);
+  }
+
+  // Örnek ;
+
+  var userName = "guest";
+  var password = "password";
+  var check = false;
+
+  while (check == false) {
+    var k_user = prompt("lütfen kullanici adi giriniz");
+    var k_password = prompt("lütfen sifrenizi giriniz");
+
+    if (k_user == userName && k_password == password) {
+      document.write("SIFRE DOGRU");
+      console.log("Sifre dogru, Hosgeldiniz");
+      check = true;
+    } else {
+      document.write("SIFRE YANLIS");
+      console.log("sifre yanlis lütfen tekrar deneyiniz");
+    }
+  }
+
+  //TODO ************************************************************************************************
+
+  //! Do-While Döngüsü
+
+  /* 
   Do-While döngüsü yapı olarak while döngüsüne çok benzer. 
   Tek farkı döngü koşulunun en sonda kontrol edilmesidir.
   Bu yüzden bir do-while döngüsü en az bir kere çalışır.
   */
 
-      // Örnek ; Dışarıdan 0-100 (not) dışında bir değer girilmesini engelleyen kodu yazınız.
+  // Örnek ; Dışarıdan 0-100 (not) dışında bir değer girilmesini engelleyen kodu yazınız.
 
-      let not;
-      do {
-        not = prompt("0-100 arasında bir not giriniz:");
-      } while (not < 0 || not > 100);
-      console.log("Giridiğiniz not 0-100 arasındadır");
-  }
+  let not;
+  do {
+    not = prompt("0-100 arasında bir not giriniz:");
+  } while (not < 0 || not > 100);
+  console.log("Giridiğiniz not 0-100 arasındadır");
 }

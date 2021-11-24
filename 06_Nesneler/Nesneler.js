@@ -210,13 +210,14 @@ people
     };
   })
   .forEach((x) => console.log(x));
+
 /*
-{ad: 'HAKAN', yas: 46, soyad: 'in'}
-{ad: 'SAID', yas: 42, soyad: 'ci'}
-{ad: 'KUBILAY', yas: 38, soyad: 'tu'}
-{ad: 'OSMAN', yas: 34, soyad: 'Tü'}
-{ad: 'HÜSEYIN', yas: 37, soyad: 'ha'}
-  */
+ {ad: 'HAKAN', yas: 46, soyad: 'in'}
+ {ad: 'SAID', yas: 42, soyad: 'ci'}
+ {ad: 'KUBILAY', yas: 38, soyad: 'tu'}
+ {ad: 'OSMAN', yas: 34, soyad: 'Tü'}
+ {ad: 'HÜSEYIN', yas: 37, soyad: 'ha'}
+ */
 
 //? Örnek 5 ;  mesleği developer olanların isimleri büyük harf yapıp ve yaslarını yazdırınız
 //? (isterseniz diziye atayıp diziyi yazdırınız)
@@ -231,8 +232,195 @@ const yeni = people
   });
 console.log(yeni);
 /*
-(2) [{…}, {…}]
-0: {ad: 'HAKAN', yas: 41}
-1: {ad: 'HÜSEYIN', yas: 32}
-length: 2
+ (2) [{…}, {…}]
+ 0: {ad: 'HAKAN', yas: 41}
+ 1: {ad: 'HÜSEYIN', yas: 32}
+ length: 2
+ */
+
+//? Örnek 6 ;
+
+var marka = ["Toyota", "BMW", "Opel", "Audi"];
+var model = ["Corolla", "320d", "Meriva", "Q3"];
+var years = ["2015", "2012", "2016", "2014"];
+
+for (var i = 0; i < marka.length; i++) {
+  document.write(marka[i] + " " + model[i] + " " + years[i] + "<br>");
+}
+
+// alternatif
+
+var toyota = ["toyota", "Corolla", "2015"];
+
+// Obje 1. Yöntem ;
+
+var araba = {
+  marka: "Toyota",
+  model: "Corolla",
+  yil: 2014,
+  renk: "koyu gri",
+  otomatik: true,
+};
+
+console.log(araba);
+/*
+marka: "Toyota"
+model: "Corolla"
+otomatik: true
+renk: "koyu gri"
+yil: 2014
+*/
+
+console.log(araba.renk); // koyu gri
+console.log(araba["renk"]); // koyu gri
+
+// Obje 2. Yöntem ;
+
+var oto = new Object();
+
+oto.marka = "Audi";
+oto.model = "Q3";
+oto.yil = "2015";
+
+console.log(oto);
+/*
+marka: "Audi"
+model: "Q3"
+vites: "otomatik"
+yil: "2015"
+*/
+
+oto.vites = "otomatik";
+
+// Birden fazla temel veri ile dizi icerisinde Object olusturma
+
+var arabalar = [
+  araba,
+  {
+    marka: "BMW",
+    model: "3.20d",
+    yil: 2011,
+    renk: "siyah",
+    otomatik: true,
+  },
+  {
+    marka: "Mercedes",
+    model: "SL300",
+    yil: 2020,
+    renk: "kirmizi",
+    otomatik: false,
+  },
+];
+
+console.log(arabalar);
+/*
+0: {marka: 'Toyota', model: 'Corolla', yil: 2014, renk: 'koyu gri', otomatik: true}
+1: {marka: 'BMW', model: '3.20d', yil: 2011, renk: 'siyah', otomatik: true}
+2: {marka: 'Mercedes', model: 'SL300', yil: 2020, renk: 'kirmizi', oto
+*/
+console.log(arabalar[1]);
+// 1: {marka: 'BMW', model: '3.20d', yil: 2011, renk: 'siyah', otomatik: true}
+
+for (var i = 0; i < arabalar.length; i++) {
+  console.log(arabalar[i].renk); // koyu gri siyah kırmızı
+}
+
+for (var i = 0; i < arabalar.length; i++) {
+  console.log(arabalar[i].yil); // 2014 2011 2020
+}
+
+//? Örnek 7 ;
+
+/* 1) Bir personelin asagidaki bilgilerini object icerisine alalim;
+  ad: Beyza
+  soyad: Güvenc
+  cinsiyet: Kadin
+  telefon: 099999999999
+  adres: Ankara, cankaya
+  diller: ingilizce, italyanca, ispanyolca
+  hobiler: tenis, yüzme ve kitap okumak
+
+  2) Bu personel kac dil bilmektedir?
+  3) Bu personelin hobilerini altalta yazdiriniz
+  4) 3 elemanli personel bilgi sistemi olusturun.
+    */
+
+// 1. soru cözümü
+var personel = {
+  ad: "Beyza",
+  soyad: "Güvenc",
+  cinsiyet: "Kadin",
+  telefon: "099999999999",
+  adres: "Ankara, cankaya",
+  diller: ["ingilizce", "italyanca", "ispanyolca"],
+  hobiler: ["tenis", "yüzme", "kitap okumak"],
+};
+
+console.log(personel);
+
+//2. soru cözümü
+console.log(personel.diller.length); // 3
+console.log(personel.diller); // ['ingilizce', 'italyanca', 'ispanyolca']
+
+//3. soru cözüm
+
+console.log(personel.hobiler); // ['tenis', 'yüzme', 'kitap okumak']
+
+// 1. yontem
+for (var i = 0; i < personel.hobiler.length; i++) {
+  console.log(personel.hobiler[i]); // tenis, yüzme, kitap okumak
+}
+
+// 2. yöntem
+personel.hobiler.forEach(function (hobi) {
+  console.log(hobi); // tenis, yüzme, kitap okumak
+});
+
+//4. soru cözüm
+
+var personeller = [
+  {
+    ad: "Beyza",
+    soyad: "Güvenc",
+    cinsiyet: "Kadin",
+    telefon: "099999999999",
+    adres: "Ankara, cankaya",
+    diller: ["ingilizce", "italyanca", "ispanyolca"],
+    hobiler: ["tenis", "yüzme", "kitap okumak"],
+  },
+  {
+    ad: "Tahir",
+    soyad: "Cesur",
+    cinsiyet: "Erkek",
+    telefon: "099998782999",
+    adres: "Izmir, konak",
+    diller: ["ingilizce", "ispanyolca"],
+    hobiler: ["golf", "futbol", "kitap okumak"],
+  },
+  {
+    ad: "Basri",
+    soyad: "konuskan",
+    cinsiyet: "erkek",
+    telefon: "0111111111",
+    adres: "Neuss, kaarst",
+    diller: ["Almanca", "italyanca", "ispanyolca"],
+    hobiler: ["yüzme", "Java", "kitap okumak"],
+  },
+];
+
+personeller.forEach(function (prs) {
+  console.log("&&&&&&&&&&&&&&&&&&&&&&&&&&&");
+  console.log(prs.ad + " " + prs.soyad);
+  console.log("===========================");
+});
+/*
+&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Beyza Güvenc
+===========================
+&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Tahir Cesur
+===========================
+&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Basri konuskan
+===========================
 */
