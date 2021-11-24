@@ -113,6 +113,32 @@ document.write(
 
 //! ********************************************************************************* */
 
+var marka;
+console.log(marka); // undefined
+
+marka = prompt("Lütfen marka giriniz: "); // Klavyeden gelecek
+var model = prompt("Model giriniz: "); // Klavyeden gelecek
+console.log(marka + " " + model); // Örnek ; Toyota Corolla gibi bişey yazacak...
+var menzil = 600;
+console.log(menzil); // 600
+var depo = 52;
+var kurus = (depo * 8) / 600;
+console.log(kurus); // 0.69
+
+console.log(
+  marka +
+    " markanin " +
+    model +
+    " araci bir depo yakit ile " +
+    menzil +
+    " km yol gidebiliyor. Km ye tekabül ücreti ise " +
+    kurus +
+    " kuruştur..."
+); // ........... markanin ............ araci bir depo yakit ile 600 km yol gidebiliyor.
+// Km ye tekabül ücreti ise 0.6933333333333334 kuruştur...
+
+//! ********************************************************************************* */
+
 //! Const
 
 // TODO: const ve let Modern JS ile gelmiş yeni değişken tanımlama keyword'leridir.
