@@ -139,6 +139,25 @@ console.log(
 
 //! ********************************************************************************* */
 
+// Örnek ; Bir öğrencinin bilgilerini alip, yıl sonu ortalamasini ögrenelim...
+
+var kim = prompt("isim giriniz: ");
+var id = prompt("numara giriniz: ");
+var dersAdi = prompt("ders giriniz: ");
+var yazili1 = prompt("1. yazili notu: ");
+var yazili2 = prompt("2. yazili notu: ");
+
+var ortalamam = (Number(yazili1) + Number(yazili2)) / 2;
+console.log(
+  kim +
+    " adli ögrencinin " +
+    dersAdi +
+    " dersindeki yil sonu ortalamasi " +
+    ortalamam
+); // Klavyeden gelecek
+
+//! ********************************************************************************* */
+
 //! Const
 
 // TODO: const ve let Modern JS ile gelmiş yeni değişken tanımlama keyword'leridir.
