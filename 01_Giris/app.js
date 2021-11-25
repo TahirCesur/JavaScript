@@ -683,3 +683,17 @@ document.write("<br/>" + (rakam1 + rakam2));
 
 // Doğru sonucu bulmak istiyorsak şunu yapmalıyız..
 document.write("<br/>" + (rakam1 * 10 + rakam2 * 10) / 10); // 0.99
+
+// TODO **********************************************************************************
+
+//! Hosting
+
+var xyzt;
+qwerty = 7;
+
+document.write(xyzt + "<br>" + qwerty);
+
+xyzt = 6;
+var qwerty;
+
+// Sonuc ; xyzt : undefined    qwerty : 7
