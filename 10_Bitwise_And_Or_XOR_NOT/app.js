@@ -1,4 +1,14 @@
 //! ********************************************************************************* */
+//? Bu işlemleri yapabilmek için 10 luk sistemi 2 lik sisteme çevirmek gerekir...
+//? Mesela 12 sayısını ele alalım..
+//? 12 10 luk sitemdedir.. 2 lik sisteme şu şekilde çevrilir..
+//? Sürekli 2 ye bölersiniz..
+//! 12/2=6 kalan 0
+//! 6/2=3 kalan 0
+//! 3/2=1 kalan 0
+//! 1/2=> 1 2 ye bölünmez ve 1 i almış oluruz..
+//! Çıkan sonuç tersten yazdırılır...
+//? Sonuç ; 1000 olmuş olur.......
 
 /*
 Operatör
