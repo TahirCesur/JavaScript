@@ -1,6 +1,11 @@
 //! Js yi Etkinleştirme Modu
 
 /*
+Kısa bir bilgilendirme...
+
+1995 yılında Brendan Eich tarafından üretildi...
+Orjinal adı : Mocha idi.. Sonra JS oldu..
+
 <noscript>
 Js devre dışı.. Etkinleştirmek için browserdaki ayarlar bölümünden düzeltme yapabilrsiniz...
 </noscript>
