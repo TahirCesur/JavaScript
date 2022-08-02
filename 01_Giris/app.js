@@ -5,6 +5,7 @@ Kısa bir bilgilendirme...
 
 1995 yılında Brendan Eich tarafından üretildi...
 Orjinal adı : Mocha idi.. Sonra JS oldu..
+Js Kodları " " veya ' ' arasında yazılabilir...
 
 <noscript>
 Js devre dışı.. Etkinleştirmek için browserdaki ayarlar bölümünden düzeltme yapabilrsiniz...
@@ -20,23 +21,21 @@ body tag ının en alt kısmına tanımlanabilir.. Aşağıdaki gibi...
     <h1>Javascript Dersine Hoşgeldiniz...</h1>
 
 
-
-
     <script src="app.js"></script>
 </body>
 */
 
 //! Js Yazdırma Şekilleri...
 
-//? console.log --> Tarayıcı konsoluna yazdırma
-//? alert() (window.alert) --> Uyarı pencersine yazdırma
+//? 1-console.log --> Tarayıcı konsoluna yazdırma
+//? 2-alert() (window.alert) --> Uyarı pencersine yazdırma
 // alert bize tek seçenek sunar "Tamam" butonuyla...
 alert("Dikkat");
-//? document.write() --> HTML sayfasına yazdırma
+//? 3-document.write() --> HTML sayfasına yazdırma
 document.write("<br/>" + "Merhaba");
 document.write("<br/>" + "Merhaba <font color='red'>Dünya</font> Hoşgeldiniz");
-//? innerHTML --> HTML nesnelerine yazdırma
-//? pronmpt() "Tamam" ve "İptal" seçeneği sunar... 2 Türlü yazımı vardır..
+//? 4-innerHTML --> HTML nesnelerine yazdırma
+//? 5-pronmpt() "Tamam" ve "İptal" seçeneği sunar... 2 Türlü yazımı vardır..
 prompt("Adınızı Giriniz");
 prompt("Youtube Kanal Adı Giriniz", "Youtube Kanalı");
 var kanal_ismi;
@@ -54,6 +53,7 @@ confirm("Onay verdiğinize emin misiniz");
 console.log("Hello Javascript");
 console.warn("Bu bir uyarıdır");
 console.error("Bu bir hatadır bilerek yazdım...");
+// console.clear("Consolu temizler")
 
 // Değişken Tanımlama Türleri --> (Var-Const-Let)
 
@@ -73,9 +73,12 @@ console.error("Bu bir hatadır bilerek yazdım...");
 
 //! ÖNEMLİ: var deyimi ile aynı isimle tekrar değişken tanımlamak mümkündür.
 
-var fiyat;
-fiyat = 23;
+var fiyat; // burada bir tanımlama olmadığı için
+console.log(fiyat); // undefined yazdırır...
+fiyat = 23; // tanımlama yapar ve bir değer verirsek
 console.log(fiyat); // 23 yazdırır...
+
+//! Not: console.log ta yazdırılan integer ifadeler mavi renk string ler gri renk olur..
 
 fiyat = 19.99;
 console.log("FİYAT:" + fiyat); // FİYAT: 19.99 yazdırır
@@ -84,9 +87,9 @@ var fiyat = "ücretsiz";
 console.log("FİYAT:" + fiyat); // FİYAT: ücretsiz yazdırır
 
 var isim = "Tahir";
-console.log(typeof isim); // string
+console.log(typeof isim); // string ... (typeof:İsmin türü nedir demektir..)
 isim = 3.14;
-console.log(typeof isim); // number (type türünü yazdırır..)
+console.log(typeof isim); // number (typeof:İsmin türü nedir demektir..)
 
 var t, j, m, sum;
 t = 7;
@@ -106,6 +109,10 @@ var kisi = {
   yas: 33,
 };
 
+console.log(kisi); // {adi: 'Tahir', soyadi: 'Selim', yas: 33}
+
+// Anasayfada yazıdrmak istersek ;
+
 document.write(
   "<br/>" +
     "Adım " +
@@ -115,6 +122,7 @@ document.write(
     " yaşım " +
     kisi.yas
 ); // Adım Tahir Soyadım Selim yaşım 33
+   //? console da değil anasayfa da yazdırır ducument.write...
 
 //! ********************************************************************************* */
 
