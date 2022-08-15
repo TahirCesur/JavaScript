@@ -171,7 +171,7 @@ console.log(
 
 //! ********************************************************************************* */
 
-//! Const
+//! Const Değişkeni
 
 // TODO: const ve let Modern JS ile gelmiş yeni değişken tanımlama keyword'leridir.
 // ! CONST: Sadece başlangıçta değer atanabilir.
