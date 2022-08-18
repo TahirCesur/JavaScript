@@ -131,7 +131,7 @@ console.log(marka); // undefined
 
 marka = prompt("Lütfen marka giriniz: "); // Klavyeden gelecek
 var model = prompt("Model giriniz: "); // Klavyeden gelecek
-console.log(marka + " " + model); // Örnek ; Toyota Corolla gibi bişey yazacak...
+console.log(marka + " " + model); // Örnek ; Toyota Corolla (gibi bişey yazacak...)
 var menzil = 600;
 console.log(menzil); // 600
 var depo = 52;
@@ -154,9 +154,9 @@ console.log(
 
 // Örnek ; Bir öğrencinin bilgilerini alip, yıl sonu ortalamasini ögrenelim...
 
-var kim = prompt("isim giriniz: ");
-var id = prompt("numara giriniz: ");
-var dersAdi = prompt("ders giriniz: ");
+var kim = prompt("İsim giriniz: ");
+var id = prompt("Numara giriniz: ");
+var dersAdi = prompt("Ders giriniz: ");
 var yazili1 = prompt("1. yazili notu: ");
 var yazili2 = prompt("2. yazili notu: ");
 
@@ -195,8 +195,11 @@ console.log(typeof dogruMu); // boolean yazdırır
 const piSayisi = 3.14;
 // piSayisi = 3; // değiştirmeye kalkarsan itiraz eder...
 
-const isim2 = "Tahir"; // Const son değerdir değiştirilemez...Final gibi...
+const isim2 = "Cem"; // Const son değerdir değiştirilemez...Final gibi...
 console.log(typeof isim2); // number
+
+const obje = ["Ali","Ahmet","Can"];
+console.log(typeof obje); // object
 
 //! ********************************************************************************* */
 
@@ -266,6 +269,65 @@ console.log(kalanBorç); // 15.5 yazdırır...
 console.log(typeof kalanBorç); // number yazdırır
 
 // let sayac = 2; //! Hata: let ve const deyimiyle aynı scope'da tekrardan aynı isimle değişken tanımlanamaz.
+
+//! ********************************************************************************* */
+//! Değişkenlerle İlgili Bir Örnek....
+
+// Müşteri Adı
+// Müşteri Soyadı
+// Müşteri Tc Kimlik No
+// Müşteri Sipariş Toplamı
+// Müşteri Cinsiyet
+// Müşteri Yaş
+// Müşteri Adres Bilgileri
+// Müşteri Hobiler
+
+var costumerName = "Ali";
+var costumerLastname = "Can";
+
+var fullName = "Ali Can";
+var tcId = "12345678912";
+
+var siparisTotal = 205.6;
+var cinsiyet= true ; // erkek=true kadın=false
+
+var adres="İstanbul Sarıyer" ;
+
+// veya
+
+var adress = {
+  city:"İstanbul",
+  district:"Sarıyer"
+}
+
+console.log(adress);
+
+var hobies = ["Kitap","Sinema","Gezme"];
+console.log(hobies);
+
+var order1=100;
+var order2=150;
+
+var totalOrder= order1+order2;
+
+console.log(totalOrder); // 250
+
+// Siparişler tam sayı olarak toplayalım...
+
+var order3="100.2";
+var order4="150.5";
+
+var order3=parseInt("100.2");
+var order4=parseInt("150.3");
+
+var totalOrder2= order3+order4;
+
+console.log(totalOrder2); // 250
+
+var dogumYili= 1989;
+console.log(new Date().getFullYear()-dogumYili);
+
+
 
 //! ********************************************************************************* */
 
@@ -416,6 +478,8 @@ document.write(
     "<br>" +
     Number(false) +
     "<br>" +
+    Number(null) +
+    "<br>" +
     Number("10") +
     "<br>" +
     Number("    11") +
@@ -438,16 +502,17 @@ document.write(
          Ama "10 33" gibi durumlar da bize NaN döndürür...
 
  Sırasıyla Cevapları aşağıdadır..
-1
-0
+1 (true değeri 1 olur)
+0 (false değeri 0 olur)
+0 (null değeri de 0 olur)
 10
 11
 12
 13
 10.33
-NaN
-NaN
-NaN
+NaN (Not A Number --> Bu bir sayı değildir...)
+NaN (Not A Number --> Bu bir sayı değildir...)
+NaN (Not A Number --> Bu bir sayı değildir...)
 */
 
 // TODO *******************************************************************************/
