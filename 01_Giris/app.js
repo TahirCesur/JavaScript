@@ -325,9 +325,9 @@ var totalOrder2= order3+order4;
 console.log(totalOrder2); // 250
 
 var dogumYili= 1989;
-console.log(new Date().getFullYear()-dogumYili);
+console.log(new Date().getFullYear()-dogumYili); // 2022 ye göre 33 yaşında...
 
-
+//! Not : var ve let değişkenleri aynı görevi görür... const ise değişikliğ kabul etmez...
 
 //! ********************************************************************************* */
 
