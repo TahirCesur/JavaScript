@@ -796,7 +796,7 @@ const boyAda = 1.50;
 
 // Bilgiler böyle olsa...
 
-//! İndexleri hesaplamak istersek ;
+//? İndexleri hesaplamak istersek ;
 
 let IndexCan ;
 let IndexAda ;
