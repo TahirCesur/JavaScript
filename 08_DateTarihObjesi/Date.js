@@ -115,14 +115,16 @@ console.log(dakika); // 527040
 var saat = dakika / 60 ;
 console.log(saat); // 8784
 
-// Her yıl kutlanan mayıs ayının 2.pazarı olan anneler günü 2019 da ne zaman kutlanacaktır.
+// Her yıl kutlanan mayıs ayının 2.pazarı olan anneler günü 2019 da ne zaman kutlanacaktır ?
+
+
 
 // Yaş Hesaplama nasıl yapılır ?
 
-var dogumTarihi = new Date("12/11/1987"); // Bir tarih belirledik...
-var ageMilisaniye = Date.now()-dogumTarihi.getTime(); 
+var dogumTarihi = new Date("12/11/1988"); // Bir tarih belirledik...
+var yasMilisaniyeHesabi = Date.now()-dogumTarihi.getTime(); 
 // Şimdiki tarih ile doğum tarihini milisaniye cinsinden çıkardık..
-var ageDate = new Date(ageMilisaniye); // bugünkü yaşa tanımladık...
+var ageDate = new Date(yasMilisaniyeHesabi); // Bugünkü yaşa tanımladık...
 
-console.log(ageDate.getFullYear()-1970); // 34
+console.log(ageDate.getFullYear()-1970); // 33
 
