@@ -780,3 +780,46 @@ var qwerty;
 
 //! Uygulama
 
+// Can ve Ada nın boy ve kilo bilgilerini alın...
+// Alınan bilgilere göre kilo indexlerini hesaplayın..
+// Formül : Kilo/Boy*Boy
+// Hesaplanan indeks bilgilerine göre larşılaştırma yapın..
+// Aşağıdaki Tabloya göre can ve ada hangi gruba giriyor...?
+
+// 0-18,4 --> Zayıf  18,5-24,9 --> Normal   25,0-29,9 --> Kilolu  30,0-34,9 --> Obez
+
+const kgCan = 60;
+const kgAda = 40;
+
+const boyCan = 1.70;
+const boyAda = 1.50;
+
+// Bilgiler böyle olsa...
+
+//! İndexleri hesaplamak istersek ;
+
+let IndexCan ;
+let IndexAda ;
+
+IndexCan = (60/(1.70*1.70));
+IndexAda = (40/(1.50*1.50));
+
+console.log(IndexCan); // 20.7 --> Normal
+console.log(IndexAda); // 17.8 --> Zayıf
+
+// Eğer sonuç tam çıksın dersek toFixed() methodunu kullanırız..
+
+console.log(IndexCan.toFixed()); // 21 --> Normal
+console.log(IndexAda.toFixed()); // 18 --> Zayıf
+
+// veya virgüllü olsun dersek ;
+
+console.log(IndexCan.toFixed(2)); // 20.77 --> Normal
+console.log(IndexAda.toFixed(2)); // 17.78 --> Zayıf
+
+let AdaZayif = (IndexAda>=0) && (IndexAda<=18.4);
+let AdaNormal = (IndexAda>=18.5) && (IndexAda<=24.9);
+let AdaKilolu= (IndexAda>=25) && (IndexAda<=29.9);
+let AdaObez = (IndexAda>=30) && (IndexAda<=34.9);
+
+console.log(AdaZayif,AdaNormal,AdaKilolu,AdaObez) ; // true , false , false , false
