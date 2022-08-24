@@ -35,7 +35,7 @@ document.write(Math.max(11, 9, -25, 678, -45, -67, 789) + "<br>"); // 789
 
 //! Math Sabitleri
 
-// Toplamda 8 sabit mevcuttur..
+// Toplamda 8 sabit mevcuttur..Bunlar değiştirilemez...
 
 document.write("*******************" + "<br>");
 document.write("Math Sabitleri" + "<br>");
@@ -77,7 +77,7 @@ Cevapları sırasıyla şu şekildedir..
 //! random() Methodu ve Uygulama
 
 // random() ile rastgele sayı buluruz. Ama 0 ile 1 arasında sonuç verir.
-document.write(Math.random() + "<br>"); // 0.43122003263534947
+document.write(Math.random() + "<br>"); // değişken sonuç verir...0 ile 1 arasında sonuç verir.
 
 // Not : Eğer istenilen aralıkta rastgele bir sayı bulsun istiyorsak floor ile kullanmam gerekecek..
 document.write(Math.floor(Math.random() * 10) + "<br>"); // 0 dahil ama 10 hariç sayıyı döndürür..
@@ -85,7 +85,9 @@ document.write(Math.floor(Math.random() * 10) + "<br>"); // 0 dahil ama 10 hari�
 // yazılan sayıda dahil olsun istiyorsak + 1 koymamız lazım
 document.write(Math.floor(Math.random() * 10) + 1 + "<br>"); // 0 dahil ama 10 hariç sayıyı döndürür..
 
-// Uygulama
+// TODO *******************************************************************************/
+
+//! Uygulama
 
 // Not ; Butonları index sayfasında oluşturduk...
 
@@ -94,3 +96,6 @@ function rastgele(max, min) {
     Math.random() * (max - min) + min
   ));
 }
+
+
+
