@@ -89,6 +89,67 @@ document.write(Math.floor(Math.random() * 10) + 1 + "<br>"); // 0 dahil ama 10 h
 
 //! Uygulama
 
+var num = 15.123456789 ;
+
+// Toplamda 3 basamaklı sayı kullan...
+document.write(num.toPrecision(3)+ "<br>"); // 15.1 toPrecision(?) kac basamak istersek onu yazdırır...
+
+// Ondalık Kısmı 3 basamakta sınırla...
+document.write(num.toPrecision(5)+ "<br>"); // 15.123 veya to.Fixed(3) ile de olurdu...
+
+// En yakın sayıya yuvarla...
+document.write(Math.round(num)+ "<br>"); // 15
+
+// Yukarıya yuvarla...
+document.write(Math.ceil(num)+ "<br>"); // 16
+
+// Aşağıya yuvarla...
+document.write(Math.floor(num)+ "<br>"); // 15
+
+// 1,2,5,10,56,675 sayılarının en büyüğünü ve en küçüğünü bulun...
+document.write(Math.min(1,2,5,10,56,675)+ "<br>"); // 1
+document.write(Math.max(1,2,5,10,56,675)+ "<br>"); // 675
+
+
+// Sayı aralığını kullanıcıdan alın ve ikisi arasında rastgele sayı belirleyin...
+
+var min = 75 ;
+var max = 150 ;
+
+document.write(Math.floor(min+Math.random()*(max-min))+ "<br>"); 
+// 75 ile 150 arası rastgele değer gelir...
+
+// TODO *******************************************************************************/
+
+//! Uygulama
+
+/*
+
+Bir personelin yaptığı mesaiye göre aldığı maaşı hesaplayalım...
+**Brüt Maaşı : 3700 tl
+**Brüt Mesai : 10.3 tl
+Ağustos ayı mesai toplamı 42 saat ise toplam brüt maaş nedir ?
+Brüt maaş üzerinden toplam kesinti oranı %25 ise alınacak toplam net maaş nedir ?
+
+*/
+
+var brutMaas = 3700;
+var brutMesai = 10.3 ;
+var mesaiSuresi = 42 ;
+
+var toplamMaas = brutMaas+(brutMesai*mesaiSuresi);
+
+document.write(toplamMaas+"<br>"); // 4132.6 tl...
+
+var netMaas = toplamMaas-toplamMaas*0.25;
+document.write(netMaas.toFixed()+"<br>"); // 3099.45 tl...
+
+//! document.write(netMaas.toFixed()+"<br>"); // bu şekilde yazarsak 3099 olur...
+
+// TODO *******************************************************************************/
+
+//! Uygulama
+
 // Not ; Butonları index sayfasında oluşturduk...
 
 function rastgele(max, min) {
