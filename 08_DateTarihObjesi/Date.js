@@ -115,10 +115,6 @@ console.log(dakika); // 527040
 var saat = dakika / 60 ;
 console.log(saat); // 8784
 
-// Her yıl kutlanan mayıs ayının 2.pazarı olan anneler günü 2019 da ne zaman kutlanacaktır ?
-
-
-
 // Yaş Hesaplama nasıl yapılır ?
 
 var dogumTarihi = new Date("12/11/1988"); // Bir tarih belirledik...
