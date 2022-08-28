@@ -90,7 +90,8 @@ document.write("String charCodeAt : " + soyad.charCodeAt() + "<br>"); // String 
 // split() ; İstediğimiz yerden bölmeye yarar...
 var str2;
 str2 = "sinema , kitap , yazılım";
-document.write("String Split : " + str2.split("") + "<br>") // String Split : s,i,n,e,m,a, ,,, ,k,i,t,a,p, ,,, ,y,a,z,ı,l,ı,m
+document.write("String Split : " + str2.split("") + "<br>") 
+// String Split : s,i,n,e,m,a, ,,, ,k,i,t,a,p, ,,, ,y,a,z,ı,l,ı,m
 
 //TODO ************************************************************************************************
 
